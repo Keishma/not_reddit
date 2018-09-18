@@ -1,0 +1,28 @@
+.profile {
+    margin: 2% auto 15% auto;
+    width: 97%;
+    height:auto;
+    background: #E0E0E0;
+    border: 1px solid #D0D0D0;
+    max-width: 600px;
+}
+
+.prof-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: green;
+    padding:4% 0 0 2%;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.profile-pic {
+    max-width: 30%;
+    border-radius: 40%;
+}
+
+.prof-content {
+    padding: 0 3.5%;
+}

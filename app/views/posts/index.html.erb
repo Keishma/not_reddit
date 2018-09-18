@@ -1,27 +1,52 @@
-<p id="notice"><%= notice %></p>
+<header class="main-head">
+  <div class="logo">
+    <a href="<% posts_path %>">
+      <%= image_tag("logo.png", height:"80") %>
+    </a>
+    <%= link_to 'Home', root_path %>
+  </div>
+  <nav class="main-nav">
+    <%= link_to '', new_post_path, class: 'fas fa-pen-square fa-2x', style: "color: #223E4A" %>
+    <%= link_to '', new_post_path, class: 'fas fa-user fa-2x', style: "color: #223E4A" %>
+    <%= link_to 'Sign Up', new_post_path, class: 'btn nav-link' %>
+    <%= link_to 'Log in', new_post_path, class: 'btn nav-link' %>
+    <!-- <a href="profile.html" class="nav-link"><i class="fas fa-user fa-2x" style="color: #223E4A"></i></a> -->
+    <!-- <a href="sign-up.html"  class="btn nav-link">Sign Up</a> -->
+    <!-- <a href="log-in.html" class="btn nav-link"></i>Log in</a> -->
+  </nav>
+</header>
 
-<h1>Posts</h1>
-<p>Make a post...</p>
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<div class="content-wrap">
+  <main>
+    
+    <div class="container">
+      <div class="post">
+        <div class="post-info">
+          <p><i class="fas fa-chevron-circle-up fa-2x" style="color: #223E4A"></i></p>
+          <strong>12k</strong>
+          <p><i class="fas fa-chevron-circle-down fa-2x" style="color: #223E4A"></i></p>
+        </div>
+        <div class="post-right">
+          <div class="post-user">Username: 01/09/18 yayayay</div>
+          <div class="post-content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ullamcorper vel ligula at pharetra. Nunc dapibus, elit ac dignissim feugiat, velit ligula dictum lectus, id convallis elit justo id nisi. Etiam faucibus ipsum id viverra euismod. Integer et nulla odio. Phasellus sagittis in risus sed consequat. Donec id felis metus. Fusce sit amet ex non augue egestas imperdiet eget id massa. Pellentesque lobortis massa nec elit rhoncus venenatis. Aenean eget gravida nunc. Nunc in tempor mi. Pellentesque eu mi sem. Nullam vitae erat est. Maecenas blandit diam arcu, commodo dictum felis scelerisque eget. Nullam rhoncus dictum orci ac finibus.</div>
+          <div class="post-stats">395 Comments</div>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-info">
+          <p><i class="fas fa-chevron-circle-up fa-2x" style="color: #223E4A"></i></p>
+          <strong>11.5k</strong>
+          <p><i class="fas fa-chevron-circle-down fa-2x" style="color: #223E4A"></i></p>
+        </div>
+        <div class="post-right">
+          <div class="post-user">Username: 01/09/18 yayayay</div>
+          <div class="post-content"> Vestibulum rutrum risus nec augue rhoncus vehicula. Vivamus molestie libero diam, at porta mauris suscipit nec. Mauris placerat eros non nibh consequat, et lacinia magna lobortis. Sed ut velit quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu diam mattis, rutrum tortor id, finibus ligula. Nunc facilisis, nibh vel ullamcorper tempus, sem eros molestie risus, in placerat mauris est id est. Fusce tempus efficitur enim in tincidunt. Sed eu laoreet tellus, non vulputate odio. Vivamus porta lectus eget metus vehicula gravida. Donec nec condimentum leo.
+            <p>Duis ut tortor efficitur, semper ipsum eget, feugiat nibh. Aliquam condimentum dapibus efficitur. Etiam eget efficitur lorem, id euismod neque. Etiam neque nunc, consectetur vel blandit non, aliquet eu felis. Praesent justo nunc, congue vitae porttitor vel, pulvinar eget lectus. Cras posuere iaculis sollicitudin. Nullam non nulla eu sem interdum imperdiet ac porta augue. Fusce vitae felis elementum, dictum eros quis, suscipit arcu. Phasellus nec felis in purus dictum convallis. Sed porta ligula sapien, nec molestie enim vulputate id.</p>
+          </div>
+          <div class="post-stats">319 Comments</div>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+</div>
