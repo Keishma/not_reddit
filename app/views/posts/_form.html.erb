@@ -10,13 +10,24 @@
       </ul>
     </div>
   <% end %>
-
+<main>
+      <div class="container">
+        <div class="create-container">
+          <form class="create" action="">
+          <h2>Create a Post</h2>
+              <hr>
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    
+    <%= form.text_field :title, placeholder: "title", :required => true %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
 <% end %>

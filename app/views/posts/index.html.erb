@@ -1,44 +1,18 @@
-<header class="main-head">
-  <div class="logo">
-    <a href="<% posts_path %>">
-      <%= image_tag("logo.png", height:"80") %>
-    </a>
-    <%= link_to 'Home', root_path %>
-  </div>
-  <nav class="main-nav">
-    <%= link_to '', new_post_path, class: 'fas fa-pen-square fa-2x', style: "color: #223E4A" %>
-    <%= link_to '', new_post_path, class: 'fas fa-user fa-2x', style: "color: #223E4A" %>
-    <%= link_to 'Sign Up', new_post_path, class: 'btn nav-link' %>
-    <%= link_to 'Log in', new_post_path, class: 'btn nav-link' %>
-    <!-- <a href="profile.html" class="nav-link"><i class="fas fa-user fa-2x" style="color: #223E4A"></i></a> -->
-    <!-- <a href="sign-up.html"  class="btn nav-link">Sign Up</a> -->
-    <!-- <a href="log-in.html" class="btn nav-link"></i>Log in</a> -->
-  </nav>
-</header>
 
-<div class="content-wrap">
-  <main>
-    
-    <div class="container">
-          <% @posts.each do |post| %>
-            <div class="post">
-                <div class="post-info">
-                  <p><i class="fas fa-chevron-circle-up fa-2x" style="color: #223E4A"></i></p>
-                  <strong>11.5k</strong>
-                  <p><i class="fas fa-chevron-circle-down fa-2x" style="color: #223E4A"></i></p>
-                </div>
-                <div class="post-right">
-                  <div><%= post.title %></div>
-                  <div class="post-user">Username: 01/09/18 yayayay</div>
-                  <div class="post-content"> Vestibulum rutrum risus nec augue rhoncus vehicula. Vivamus molestie libero diam, at porta mauris suscipit nec. Mauris placerat eros non nibh consequat, et lacinia magna lobortis. Sed ut velit quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu diam mattis, rutrum tortor id, finibus ligula. Nunc facilisis, nibh vel ullamcorper tempus, sem eros molestie risus, in placerat mauris est id est. Fusce tempus efficitur enim in tincidunt. Sed eu laoreet tellus, non vulputate odio. Vivamus porta lectus eget metus vehicula gravida. Donec nec condimentum leo.
-                    <p>Duis ut tortor efficitur, semper ipsum eget, feugiat nibh. Aliquam condimentum dapibus efficitur. Etiam eget efficitur lorem, id euismod neque. Etiam neque nunc, consectetur vel blandit non, aliquet eu felis. Praesent justo nunc, congue vitae porttitor vel, pulvinar eget lectus. Cras posuere iaculis sollicitudin. Nullam non nulla eu sem interdum imperdiet ac porta augue. Fusce vitae felis elementum, dictum eros quis, suscipit arcu. Phasellus nec felis in purus dictum convallis. Sed porta ligula sapien, nec molestie enim vulputate id.</p>
-                  </div>
-                  <div class="post-stats">319 Comments</div>
-                </div>
-              </div>
-          <% end %>
+<% @posts.each do |post| %>
+  <div class="post">
+      <div class="post-info">
+        <p><i class="fas fa-chevron-circle-up fa-2x" style="color: #223E4A"></i></p>
+        <strong>11.5k</strong>
+        <p><i class="fas fa-chevron-circle-down fa-2x" style="color: #223E4A"></i></p>
+      </div>
+      <div class="post-right">
+        <div><%= post.title %></div>
+        <div class="post-user">Username: 01/09/18 yayayay</div>
+        <div class="post-content"> Vestibulum rutrum risus nec augue rhoncus vehicula. Vivamus molestie libero diam, at porta mauris suscipit nec. Mauris placerat eros non nibh consequat, et lacinia magna lobortis. Sed ut velit quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu diam mattis, rutrum tortor id, finibus ligula. Nunc facilisis, nibh vel ullamcorper tempus, sem eros molestie risus, in placerat mauris est id est. Fusce tempus efficitur enim in tincidunt. Sed eu laoreet tellus, non vulputate odio. Vivamus porta lectus eget metus vehicula gravida. Donec nec condimentum leo.
+          <p>Duis ut tortor efficitur, semper ipsum eget, feugiat nibh. Aliquam condimentum dapibus efficitur. Etiam eget efficitur lorem, id euismod neque. Etiam neque nunc, consectetur vel blandit non, aliquet eu felis. Praesent justo nunc, congue vitae porttitor vel, pulvinar eget lectus. Cras posuere iaculis sollicitudin. Nullam non nulla eu sem interdum imperdiet ac porta augue. Fusce vitae felis elementum, dictum eros quis, suscipit arcu. Phasellus nec felis in purus dictum convallis. Sed porta ligula sapien, nec molestie enim vulputate id.</p>
+        </div>
+        <div class="post-stats">319 Comments</div>
       </div>
     </div>
-    
-  </main>
-</div>
+<% end %>
