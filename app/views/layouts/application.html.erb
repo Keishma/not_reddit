@@ -20,9 +20,13 @@
       <nav class="main-nav">
         <%= link_to '', new_post_path, class: 'fas fa-pen-square fa-2x', style: "color: #223E4A" %>
         <%= link_to '', new_post_path, class: 'fas fa-user fa-2x', style: "color: #223E4A" %>
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn nav-link' %>
-        <%= link_to 'Log in', user_session_path, class: 'btn nav-link' %>
-        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+        
+        <%- if user_signed_in? %>
+          <%= link_to "Log Out", destroy_user_session_path, class: 'btn nav-link', method: :delete %>
+          <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'btn nav-link' %>
+          <%= link_to 'Log in', user_session_path, class: 'btn nav-link' %>
+        <% end %>
         <!-- <a href="profile.html" class="nav-link"><i class="fas fa-user fa-2x" style="color: #223E4A"></i></a> -->
         <!-- <a href="sign-up.html"  class="btn nav-link">Sign Up</a> -->
         <!-- <a href="log-in.html" class="btn nav-link"></i>Log in</a> -->

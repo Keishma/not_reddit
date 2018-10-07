@@ -1,0 +1,33 @@
+<%= form_with(model: [post, comment], local: true) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<main>
+      <div class="container">
+        <div class="create-container">
+          <form class="create" action="">
+          <h2>Create a Comment</h2>
+              <hr>
+  <div class="field">
+    
+    <%= form.text_field :text, placeholder: "comment", :required => true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+<% end %>

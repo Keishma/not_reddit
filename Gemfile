@@ -64,3 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Used for Authentication
 #https://github.com/plataformatec/devise
 gem 'devise'
+
+#Used for Permissions
+#https://github.com/CanCanCommunity/cancancan
+gem 'cancancan', '~> 2.0'
